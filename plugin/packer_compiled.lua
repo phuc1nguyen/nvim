@@ -74,6 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
+  dracula = {
+    loaded = true,
+    path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/dracula",
+    url = "https://github.com/dracula/vim"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -84,10 +94,15 @@ _G.packer_plugins = {
     path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  vim = {
+  ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/dracula/vim"
+    path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
 
