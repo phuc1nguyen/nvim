@@ -7,4 +7,9 @@ require('packer').startup(function()
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+	use {
+		'iamcco/markdown-preview.nvim',
+		run = 'cd app && yarn install',
+		ft = 'markdown',
+	}
 end)
