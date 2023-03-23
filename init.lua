@@ -51,7 +51,7 @@ require('nvim-treesitter.configs').setup {
 }
 
 vim.g.mkdp_auto_start = 0
-vim.g.mkdp_browser = 'cat'
+vim.g.mkdp_browser = ''
 vim.g.mkdp_echo_preview_url = 0
 vim.g.mkdp_preview_options = {
    mkit = {},
