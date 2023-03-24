@@ -9,6 +9,10 @@ if vim.fn.empty(vim.fn.glob(packer_path)) > 0 then
 end
 
 require('plugins')
+require('config.keymaps')
+
+-- Make all buffers modifiable
+vim.opt.modifiable = true
 
 -- Load dracula theme
 vim.cmd('packadd dracula')
@@ -19,16 +23,8 @@ vim.cmd('colorscheme dracula')
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Enable syntax highlighting
-vim.cmd('syntax on')
-
 -- Configure coc.nvim
-vim.cmd('autocmd FileType * lua require("configs.coc")')
-
--- Remap keybinding for Telescope
-local builtin = require('telescope.builtin')
-vim.g.mapleader = " "
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.cmd('autocmd FileType * lua require("config.coc")')
 
 -- Activate Tree Sitter modules
 require('nvim-treesitter.configs').setup {
