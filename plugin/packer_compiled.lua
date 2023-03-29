@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/dracula",
     url = "https://github.com/dracula/vim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/phuc1nguyen/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
