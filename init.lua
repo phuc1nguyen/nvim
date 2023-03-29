@@ -1,27 +1,11 @@
--- Define where Packer should be installed
-local packer_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-
--- Check if Packer is already installed
-if vim.fn.empty(vim.fn.glob(packer_path)) > 0 then
-	-- Install Packer if it is not already installed
-	vim.fn.system({'git', 'clone', 'https://github.com/wbthomason/packer.nvim', packer_path})
-	vim.api.nvim_command('packadd packer.nvim')
-end
-
-require('plugins')
-require('config.keymaps')
-
--- Make all buffers modifiable
-vim.opt.modifiable = true
+require('phuc1nguyen.base')
+require('phuc1nguyen.keymaps')
+require('phuc1nguyen.plugins')
 
 -- Load dracula theme
 vim.cmd('packadd dracula')
 vim.opt.background = 'dark'
 vim.cmd('colorscheme dracula')
-
--- Display line relative number
-vim.opt.number = true
-vim.opt.relativenumber = true
 
 -- Configure coc.nvim
 vim.cmd('autocmd FileType * lua require("config.coc")')
@@ -44,14 +28,4 @@ require('nvim-treesitter.configs').setup {
 		end,
 		additional_vim_regex_highlighting = false,
 	},
-}
-
-vim.g.mkdp_auto_start = 0
-vim.g.mkdp_browser = ''
-vim.g.mkdp_echo_preview_url = 0
-vim.g.mkdp_preview_options = {
-   mkit = {},
-   katex = {},
-   uml = {},
-   disable_sync_scroll = 0,
 }
