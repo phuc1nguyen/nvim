@@ -1,8 +1,8 @@
 local status, lspconfig = pcall(require, 'lspconfig')
 if (not status) then return end
-local protocal = require('vim.lsp.protocol')
+local protocol = require('vim.lsp.protocol')
 
-local on_attach = function(client, buffer)
+local on_attach = function(client, bufnr)
   local nvim_command = vim.api.nvim_command
 
   if client.server_capabilities.documentFormattingProvider then
@@ -33,7 +33,7 @@ lspconfig.lua_ls.setup {
   settings = {
     diagnostics = {
       -- Get the language server to recognize the `vim` global
-      globals = {'vim'},
+      globals = { 'vim' },
     },
     workspace = {
       -- Make the server aware of Neovim runtime files
