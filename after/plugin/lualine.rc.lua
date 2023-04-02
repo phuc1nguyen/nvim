@@ -39,6 +39,6 @@ lualine.setup {
     lualine_c = {'filename'},
     lualine_x = {},
     lualine_y = {},
-    lualine_z = {'tabs'}
+    lualine_z = {}
   }
 }

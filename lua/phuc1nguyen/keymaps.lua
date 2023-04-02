@@ -31,3 +31,6 @@ keymap.set('n', '<leader>l', '<C-w>l')
 -- keymap.set('n', '<C-w><right>', '<C-w>>')
 -- keymap.set('n', '<C-w><up>', '<C-w>+')
 -- keymap.set('n', '<C-w><down>', '<C-w>-')
+
+-- Toggle Neotree
+keymap.set('n', '<C-b>', ':Neotree toggle<Return>') -- Same as VSCode ^^

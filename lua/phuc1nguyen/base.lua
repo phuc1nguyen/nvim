@@ -1,12 +1,13 @@
 print('Hello from phuc1nguyen')
+local opt = vim.opt
 
 -- Display line relative number
-vim.opt.number = true
-vim.opt.relativenumber = true
+opt.number = true
+opt.relativenumber = true
 
 -- Set tab width to 2
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+opt.tabstop = 2
+opt.shiftwidth = 2
 
 -- Set tab type to spaces
-vim.opt.expandtab = true
+opt.expandtab = true
