@@ -10,15 +10,15 @@ lualine.setup {
     disabled_filetypes = {}
   },
   sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_a = {'branch'},
+    lualine_b = {'filetype', 'diff', 'diagnostics'},
     lualine_c = {{
       'filename',
       file_status = true,
-      path = 0 -- 0: just filename, 1: relative path, 2: absolute path
+      path = 0
     }},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_x = {'encoding', 'fileformat'},
+    lualine_y = {},
     lualine_z = {'location'}
   },
   inactive_sections = {
@@ -27,10 +27,10 @@ lualine.setup {
     lualine_c = {{
       'filename',
       file_status = true,
-      path = 1 -- 0: just filename, 1: relative path, 2: absolute path
+      path = 1
     }},
     lualine_x = {'filetype', 'location'},
     lualine_y = {},
     lualine_z = {}
-  }
+  },
 }

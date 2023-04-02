@@ -14,17 +14,15 @@ end
 
 require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
-	use { 'neoclide/coc.nvim', branch = 'release' }
-	use 'nvim-treesitter/nvim-treesitter'
+
+  -- Themes
 	use { 'dracula/vim', as = 'dracula' }
+  use "navarasu/onedark.nvim"
+
+	use 'nvim-treesitter/nvim-treesitter'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		requires = { {'nvim-lua/plenary.nvim'} }
-	}
-	use {
-		'iamcco/markdown-preview.nvim',
-		run = 'cd app && yarn install',
-		ft = 'markdown',
 	}
 	use {
 		"nvim-neo-tree/neo-tree.nvim",
@@ -39,5 +37,4 @@ require('packer').startup(function()
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
-  use 'nvim-tree/nvim-web-devicons'
 end)
