@@ -1,8 +1,8 @@
 local status, lspconfig = pcall(require, 'lspconfig')
 if (not status) then return end
-local protocol = require('vim.lsp.protocol')
 
-local on_attach = function(client, bufnr)
+local protocol = require('vim.lsp.protocol')
+local custom_attach = function(client, bufnr)
   local nvim_command = vim.api.nvim_command
 
   if client.server_capabilities.documentFormattingProvider then
@@ -14,7 +14,7 @@ local on_attach = function(client, bufnr)
 end
 
 lspconfig.tsserver.setup {
-  on_attach = on_attach,
+  on_attach = custom_attach,
   filetypes = {
     'javascript',
     'javascriptreact',
@@ -27,7 +27,7 @@ lspconfig.tsserver.setup {
 }
 
 lspconfig.lua_ls.setup {
-  on_attach = on_attach,
+  on_attach = custom_attach,
   filetypes = { 'lua' },
   cmd = { 'lua-language-server' },
   settings = {
@@ -37,7 +37,7 @@ lspconfig.lua_ls.setup {
     },
     workspace = {
       -- Make the server aware of Neovim runtime files
-      library = vim.api.nvim_get_runtime_file("", true),
+      library = vim.api.nvim_get_runtime_file('', true),
     },
     -- Do not send telemetry data containing a randomized but unique identifier
     telemetry = {
