@@ -42,4 +42,6 @@ packer.startup(function()
     requires = { 'nvim-tree/nvim-web-devicons' },
     config = true
   } -- Tabline
+  use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-autopairs'
 end)

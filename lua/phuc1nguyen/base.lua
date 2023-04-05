@@ -3,7 +3,7 @@ local opt = vim.opt
 
 -- Display line relative number
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 
 -- Set tab width to 2
 opt.tabstop = 2
