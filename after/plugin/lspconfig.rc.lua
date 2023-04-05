@@ -2,6 +2,7 @@ local status, lspconfig = pcall(require, 'lspconfig')
 if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
+
 local custom_attach = function(client, bufnr)
   local nvim_command = vim.api.nvim_command
 
