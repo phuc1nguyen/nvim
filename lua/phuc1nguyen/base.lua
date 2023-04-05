@@ -22,7 +22,7 @@ g.coq_settings = {
   },
   display = {
     preview = {
-      border = "single"
+      border = 'single'
     }
   }
 }
