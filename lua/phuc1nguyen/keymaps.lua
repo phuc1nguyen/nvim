@@ -19,17 +19,17 @@ map.set('n', 'ss', ':split<Return><C-w>w')
 map.set('n', 'sv', ':vsplit<Return><C-w>w')
 
 -- Move window
-map.set('n', '<leader>w', '<C-w>w')
+-- map.set('n', '<leader>w', '<C-w>w')
 map.set('n', '<leader>h', '<C-w>h')
 map.set('n', '<leader>k', '<C-w>k')
 map.set('n', '<leader>j', '<C-w>j')
 map.set('n', '<leader>l', '<C-w>l')
 
 -- Resize window
-map.set('n', '<leader><left>', '<C-w><')
-map.set('n', '<leader><right>', '<C-w>>')
-map.set('n', '<leader><up>', '<C-w>+')
-map.set('n', '<leader><down>', '<C-w>-')
+map.set('n', '<C-w><left>', '<C-w><')
+map.set('n', '<C-w><right>', '<C-w>>')
+map.set('n', '<C-w><up>', '<C-w>+')
+map.set('n', '<C-w><down>', '<C-w>-')
 
 -- Navigate tabs
 map.set('n', '<leader>1', '1gt')
