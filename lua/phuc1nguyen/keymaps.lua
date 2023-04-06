@@ -25,11 +25,11 @@ map.set('n', '<leader>k', '<C-w>k')
 map.set('n', '<leader>j', '<C-w>j')
 map.set('n', '<leader>l', '<C-w>l')
 
--- -- Resize window
--- map.set('n', '<C-w><left>', '<C-w><')
--- map.set('n', '<C-w><right>', '<C-w>>')
--- map.set('n', '<C-w><up>', '<C-w>+')
--- map.set('n', '<C-w><down>', '<C-w>-')
+-- Resize window
+map.set('n', '<leader><left>', '<C-w><')
+map.set('n', '<leader><right>', '<C-w>>')
+map.set('n', '<leader><up>', '<C-w>+')
+map.set('n', '<leader><down>', '<C-w>-')
 
 -- Navigate tabs
 map.set('n', '<leader>1', '1gt')
