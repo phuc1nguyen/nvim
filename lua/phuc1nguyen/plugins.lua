@@ -15,10 +15,16 @@ packer.startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
 
   -- Themes
-  use { 'dracula/vim', as = 'dracula' }
   use 'navarasu/onedark.nvim'
 
-  use 'neovim/nvim-lspconfig'           -- Configurations for Neovim LSP
+  -- LSP
+  use 'neovim/nvim-lspconfig' -- Configurations for Neovim LSP
+  use 'hrsh7th/cmp-buffer'    -- nvim-cmp source for buffer words
+  use 'hrsh7th/cmp-nvim-lsp'  -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/nvim-cmp'      -- completion plugin
+  use 'onsails/lspkind-nvim'
+  use 'L3MON4D3/LuaSnip'
+
   use 'nvim-treesitter/nvim-treesitter' -- Syntax highlighting
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -45,8 +51,4 @@ packer.startup(function()
 
   use 'windwp/nvim-ts-autotag'
   use 'windwp/nvim-autopairs'
-  use {
-    'ms-jpq/coq_nvim',
-    branch = 'coq'
-  } -- Code completion
 end)
