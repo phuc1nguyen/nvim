@@ -4,7 +4,7 @@ if (not status) then return end
 local map = vim.keymap
 local protocol = require('vim.lsp.protocol')
 
-local custom_attach = function(client, bufnr)
+local on_attach = function(client, bufnr)
   local nvim_command = vim.api.nvim_command
 
   if client.server_capabilities.documentFormattingProvider then
@@ -15,8 +15,21 @@ local custom_attach = function(client, bufnr)
   end
 end
 
+lspconfig.pyright.setup {
+  on_attach = on_attach,
+  filetypes = { 'python' },
+  cmd = { 'pyright-langserver', '--stdio' },
+  settings = {
+    analysis = {
+      autoSearchPaths = true,
+      diagnosticMode = 'workspace',
+      useLibraryCodeForTypes = true
+    }
+  }
+}
+
 lspconfig.tsserver.setup {
-  on_attach = custom_attach,
+  on_attach = on_attach,
   filetypes = {
     'javascript',
     'javascriptreact',
@@ -29,7 +42,7 @@ lspconfig.tsserver.setup {
 }
 
 lspconfig.lua_ls.setup {
-  on_attach = custom_attach,
+  on_attach = on_attach,
   filetypes = { 'lua' },
   cmd = { 'lua-language-server' },
   settings = {
@@ -59,7 +72,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
-
     map.set('n', 'gD', vim.lsp.buf.declaration, opts)
     map.set('n', 'gd', vim.lsp.buf.definition, opts)
     map.set('n', 'K', vim.lsp.buf.hover, opts)

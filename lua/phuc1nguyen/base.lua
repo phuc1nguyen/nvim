@@ -4,7 +4,7 @@ local g = vim.g
 
 -- Display line relative number
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 
 -- Set tab width to 2
 opt.tabstop = 2
