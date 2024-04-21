@@ -1,6 +1,4 @@
-print('Hello from phuc1nguyen')
 local opt = vim.opt
-local g = vim.g
 
 -- Display line relative number
 opt.number = true

@@ -1,5 +1,5 @@
-local status, tabline = pcall(require, 'tabline')
-if (not status) then return end
+local ok, tabline = pcall(require, 'tabline')
+if not ok then return end
 
 tabline.setup {
   show_index = true,        -- show tab index

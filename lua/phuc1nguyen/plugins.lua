@@ -1,4 +1,4 @@
-local status, packer = pcall(require, 'packer')
+local ok, packer = pcall(require, 'packer')
 
 -- Define where Packer should be installed
 local packer_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -13,9 +13,6 @@ end
 
 packer.startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
-
-  -- Themes
-  use 'navarasu/onedark.nvim'
 
   -- LSP
   use 'neovim/nvim-lspconfig' -- Configurations for Neovim LSP
@@ -48,7 +45,4 @@ packer.startup(function()
     requires = { 'nvim-tree/nvim-web-devicons' },
     config = true
   } -- Tabline
-
-  use 'windwp/nvim-ts-autotag'
-  use 'windwp/nvim-autopairs'
 end)

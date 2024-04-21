@@ -1,4 +1,11 @@
-require('lspkind').init({
+local ok, lspkind = pcall(require, 'lspkind')
+
+if not ok then
+  print('Lspkind is not ok')
+  return
+end
+
+lspkind.init({
   -- defines how annotations are shown
   -- default: symbol
   -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
